@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:106056011533:android:fa052755bf61edd5832a44",
+        "mobilesdk_app_id": "1:106056011533:android:2410e8c122c8a549832a44",
         "android_client_info": {
-          "package_name": "com.esmooothiee.ccs.sis"
+          "package_name": "com.example.ccs_sis"
         }
       },
       "oauth_client": [
