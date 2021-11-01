@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "106056011533",
+    "project_id": "simple-inventory-311001",
+    "storage_bucket": "simple-inventory-311001.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106056011533:android:fa052755bf61edd5832a44",
+        "android_client_info": {
+          "package_name": "com.esmooothiee.ccs.sis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106056011533-otd4u89nh1hmjvpi0f35q19kkhtnjqqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARmEhd0lS4svCVurBXKQnGnigsAYRWKys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106056011533-otd4u89nh1hmjvpi0f35q19kkhtnjqqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
