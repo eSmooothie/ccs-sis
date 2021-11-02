@@ -2,6 +2,7 @@ import 'package:ccs_sis/helper/google_signin.dart';
 import 'package:ccs_sis/views/item_check.dart';
 import 'package:ccs_sis/views/item_update.dart';
 import 'package:ccs_sis/views/login.dart';
+import 'package:ccs_sis/views/maintenance.dart';
 import 'package:ccs_sis/views/new_item.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -145,6 +146,12 @@ class MainPage extends StatelessWidget {
                   OutlinedButton(
                     onPressed: () {
                       print("Maintenance");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Maintenance(),
+                        ),
+                      );
                     },
                     child: const Text(
                       "Maintenance",
