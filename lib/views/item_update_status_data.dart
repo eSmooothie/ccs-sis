@@ -133,9 +133,10 @@ class _UpdateStatusItemDataState extends State<UpdateStatusItemData> {
                     UpdateStatusItem item = UpdateStatusItem(
                       date: date.toString(),
                       itemId: itemCode,
-                      mre: checkItemExistance!.mre,
-                      transferMRE: _transferTo.text,
-                      location: _newLocation.text,
+                      fromMRE: checkItemExistance!.mre,
+                      toMRE: _transferTo.text,
+                      fromLocation: checkItemExistance.location,
+                      toLocation: _newLocation.text,
                       scanBy: user!.displayName,
                     );
 
@@ -147,6 +148,12 @@ class _UpdateStatusItemDataState extends State<UpdateStatusItemData> {
                       id: itemCode,
                       columnKey: "MRE",
                       value: _transferTo.text,
+                    );
+
+                    newItemModel.updateData(
+                      id: itemCode,
+                      columnKey: "LOCATION",
+                      value: _newLocation.text,
                     );
 
                     await showDialog(

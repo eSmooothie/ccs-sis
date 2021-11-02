@@ -76,17 +76,19 @@ class UpdateStatusItemModel extends GoogleSheet {
 class UpdateStatusItem {
   final String date;
   final String itemId;
-  final String mre;
-  final String transferMRE;
-  final String location;
+  final String fromMRE;
+  final String toMRE;
+  final String fromLocation;
+  final String toLocation;
   final String? scanBy;
 
   UpdateStatusItem({
     required this.date,
     required this.itemId,
-    required this.mre,
-    required this.transferMRE,
-    required this.location,
+    required this.fromMRE,
+    required this.toMRE,
+    required this.fromLocation,
+    required this.toLocation,
     required this.scanBy,
   });
 
@@ -94,9 +96,10 @@ class UpdateStatusItem {
     return UpdateStatusItem(
       date: json['DATE'],
       itemId: json['ITEM_ID'],
-      mre: json['MRE'],
-      transferMRE: json['TRANSFER_MRE_TO'],
-      location: json['LOCATION'],
+      fromMRE: json['FROM_MRE'],
+      toMRE: json['TO_MRE'],
+      fromLocation: json['FROM_LOCATION'],
+      toLocation: json['TO_LOCATION'],
       scanBy: json['SCAN_BY'],
     );
   }
@@ -105,14 +108,15 @@ class UpdateStatusItem {
     return {
       'DATE': date,
       'ITEM_ID': itemId,
-      'MRE': mre,
-      'TRANSFER_MRE_TO': transferMRE,
-      'LOCATION': location,
+      'FROM_MRE': fromMRE,
+      'TO_MRE': toMRE,
+      'FROM_LOCATION': fromLocation,
+      'TO_LOCATION': toLocation,
       'SCAN_BY': scanBy,
     };
   }
 
   @override
   String toString() =>
-      'Product{date: $date, item: $itemId, MRE: $mre, TRANSFER_MRE_TO: $transferMRE, LOCATION: $location, scan by: $scanBy}';
+      'Product{date: $date, item: $itemId, FROM_MRE: $fromMRE, TO_MRE: $toMRE, FROM_LOCATION: $fromLocation, TO_LOCATION: $toLocation, scan by: $scanBy}';
 }
