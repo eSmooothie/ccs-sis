@@ -106,7 +106,7 @@ class _CheckItemDataState extends State<CheckItemData> {
                       ),
                       DropdownMenuItem(
                         child: Text("Monthly"),
-                        value: "sonthly",
+                        value: "monthly",
                       ),
                       DropdownMenuItem(
                         child: Text("Semestral"),
