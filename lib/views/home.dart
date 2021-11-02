@@ -1,5 +1,6 @@
 import 'package:ccs_sis/helper/google_signin.dart';
 import 'package:ccs_sis/views/item_check.dart';
+import 'package:ccs_sis/views/item_update.dart';
 import 'package:ccs_sis/views/login.dart';
 import 'package:ccs_sis/views/new_item.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -106,7 +107,7 @@ class MainPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ItemCheck(),
+                          builder: (context) => const ItemCheck(),
                         ),
                       );
                     },
@@ -123,7 +124,12 @@ class MainPage extends StatelessWidget {
                   ),
                   OutlinedButton(
                     onPressed: () {
-                      print("Update Item");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const UpdateItem(),
+                        ),
+                      );
                     },
                     child: const Text(
                       "Update Item",
