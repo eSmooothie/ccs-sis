@@ -168,14 +168,14 @@ class _MaintenanceDataState extends State<MaintenanceData> {
                         context: context,
                         builder: (context) {
                           return const AlertDialog(
-                            title: Text("Saving"),
+                            title: Text("Saving..."),
                           );
                         });
 
                     await model.insert(item);
 
                     await Future.delayed(
-                      const Duration(seconds: 2),
+                      const Duration(seconds: 1),
                     );
 
                     Navigator.pop(context);
@@ -184,7 +184,7 @@ class _MaintenanceDataState extends State<MaintenanceData> {
                         context: context,
                         builder: (context) {
                           return const AlertDialog(
-                            title: Text("Saved"),
+                            title: Text("Saved!"),
                           );
                         });
 

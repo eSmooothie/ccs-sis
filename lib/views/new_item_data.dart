@@ -149,13 +149,13 @@ class _NewItemDataState extends State<NewItemData> {
                         context: context,
                         builder: (context) {
                           return const AlertDialog(
-                            title: Text("Saving"),
+                            title: Text("Saving..."),
                           );
                         });
                     // print(newItem.toString());
                     await newItemData.insert(newItem);
                     await Future.delayed(
-                      const Duration(seconds: 2),
+                      const Duration(seconds: 1),
                     );
                     Navigator.pop(context);
 
@@ -163,7 +163,7 @@ class _NewItemDataState extends State<NewItemData> {
                         context: context,
                         builder: (context) {
                           return const AlertDialog(
-                            title: Text("Saved"),
+                            title: Text("Saved!"),
                           );
                         });
 
