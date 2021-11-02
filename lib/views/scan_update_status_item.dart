@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:ccs_sis/views/item_borrow_data.dart';
 import 'package:ccs_sis/views/item_update_status_data.dart';
 
 import 'package:flutter/material.dart';
@@ -51,11 +50,11 @@ class _UpdateStatusItemState extends State<UpdateStatusItem> {
                   child: (result != null)
                       ? Text(
                           'Item: ${result!.code}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18.0,
                           ),
                         )
-                      : Text(
+                      : const Text(
                           'Scan a code',
                           style: TextStyle(
                             fontSize: 18.0,
@@ -75,9 +74,9 @@ class _UpdateStatusItemState extends State<UpdateStatusItem> {
                                   controller!.resumeCamera();
                                 });
                               },
-                              child: Text("Scan again"),
+                              child: const Text("Scan again"),
                               style: OutlinedButton.styleFrom(
-                                fixedSize: Size(150, 75),
+                                fixedSize: const Size(150, 75),
                               ),
                             ),
                             OutlinedButton(
@@ -90,9 +89,9 @@ class _UpdateStatusItemState extends State<UpdateStatusItem> {
                                   ),
                                 );
                               },
-                              child: Text("Proceed"),
+                              child: const Text("Proceed"),
                               style: OutlinedButton.styleFrom(
-                                fixedSize: Size(150, 75),
+                                fixedSize: const Size(150, 75),
                               ),
                             ),
                           ],
@@ -101,9 +100,9 @@ class _UpdateStatusItemState extends State<UpdateStatusItem> {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          child: Text("Back"),
+                          child: const Text("Back"),
                           style: OutlinedButton.styleFrom(
-                            fixedSize: Size(200, 75),
+                            fixedSize: const Size(200, 75),
                           ),
                         ),
                 ),

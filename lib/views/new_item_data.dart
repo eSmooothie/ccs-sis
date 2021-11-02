@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:ccs_sis/models/newItemModel.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +27,6 @@ class _NewItemDataState extends State<NewItemData> {
   String? _locErr;
   @override
   void initState() {
-    // TODO: implement initState
     itemCode = widget.itemId;
     _desc = TextEditingController();
     _loc = TextEditingController();
@@ -42,7 +43,7 @@ class _NewItemDataState extends State<NewItemData> {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
             )),
       ),
@@ -148,7 +149,7 @@ class _NewItemDataState extends State<NewItemData> {
                     await showDialog(
                         context: context,
                         builder: (context) {
-                          return AlertDialog(
+                          return const AlertDialog(
                             title: Text("Success"),
                           );
                         });

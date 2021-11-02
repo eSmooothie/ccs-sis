@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:ccs_sis/views/item_check_data.dart';
 import 'package:ccs_sis/views/maintenance_data.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
@@ -50,11 +49,11 @@ class _MaintenanceState extends State<Maintenance> {
                   child: (result != null)
                       ? Text(
                           'Item: ${result!.code}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18.0,
                           ),
                         )
-                      : Text(
+                      : const Text(
                           'Scan a code',
                           style: TextStyle(
                             fontSize: 18.0,
@@ -74,9 +73,9 @@ class _MaintenanceState extends State<Maintenance> {
                                   controller!.resumeCamera();
                                 });
                               },
-                              child: Text("Scan again"),
+                              child: const Text("Scan again"),
                               style: OutlinedButton.styleFrom(
-                                fixedSize: Size(150, 75),
+                                fixedSize: const Size(150, 75),
                               ),
                             ),
                             OutlinedButton(
@@ -89,9 +88,9 @@ class _MaintenanceState extends State<Maintenance> {
                                   ),
                                 );
                               },
-                              child: Text("Proceed"),
+                              child: const Text("Proceed"),
                               style: OutlinedButton.styleFrom(
-                                fixedSize: Size(150, 75),
+                                fixedSize: const Size(150, 75),
                               ),
                             ),
                           ],
@@ -100,9 +99,9 @@ class _MaintenanceState extends State<Maintenance> {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          child: Text("Back"),
+                          child: const Text("Back"),
                           style: OutlinedButton.styleFrom(
-                            fixedSize: Size(200, 75),
+                            fixedSize: const Size(200, 75),
                           ),
                         ),
                 ),

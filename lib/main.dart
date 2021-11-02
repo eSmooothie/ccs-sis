@@ -1,6 +1,5 @@
 import 'package:ccs_sis/helper/google_signin.dart';
 import 'package:ccs_sis/views/home.dart';
-import 'package:ccs_sis/views/login.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Home(),
+        home: const Home(),
       ),
     );
   }

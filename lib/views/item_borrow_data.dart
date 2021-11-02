@@ -1,9 +1,9 @@
+// ignore_for_file: avoid_print
+
 import 'package:ccs_sis/models/borrowItemModel.dart';
-import 'package:ccs_sis/models/checkItemModel.dart';
 import 'package:ccs_sis/models/newItemModel.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BorrowItemData extends StatefulWidget {
   const BorrowItemData({
@@ -31,7 +31,6 @@ class _BorrowItemDataState extends State<BorrowItemData> {
 
   @override
   void initState() {
-    // TODO: implement initState
     itemCode = widget.itemId;
     _borrowedBy = TextEditingController();
     _location = TextEditingController();
@@ -49,7 +48,7 @@ class _BorrowItemDataState extends State<BorrowItemData> {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
             )),
       ),

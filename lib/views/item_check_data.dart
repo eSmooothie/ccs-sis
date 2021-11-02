@@ -26,7 +26,6 @@ class _CheckItemDataState extends State<CheckItemData> {
 
   @override
   void initState() {
-    // TODO: implement initState
     itemCode = widget.itemId;
     _status = TextEditingController();
 
@@ -42,7 +41,7 @@ class _CheckItemDataState extends State<CheckItemData> {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
             )),
       ),
@@ -86,12 +85,12 @@ class _CheckItemDataState extends State<CheckItemData> {
                   ),
                   borderRadius: BorderRadius.circular(10.0),
                 ),
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 child: DropdownButton(
                     value: checkType,
                     isExpanded: true,
-                    hint: Text("Type"),
-                    icon: Icon(FontAwesomeIcons.angleDown),
+                    hint: const Text("Type"),
+                    icon: const Icon(FontAwesomeIcons.angleDown),
                     underline: Container(
                       color: Colors.transparent,
                     ),
@@ -125,6 +124,7 @@ class _CheckItemDataState extends State<CheckItemData> {
                   setState(() {
                     _statusErr = (_status.text.isEmpty) ? "Required" : null;
                   });
+                  // ignore: avoid_print
                   print("Item: $itemCode");
                   NewItemModel checkItemModel = NewItemModel();
 

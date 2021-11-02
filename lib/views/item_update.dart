@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:ccs_sis/views/scan_borrow_item.dart';
 import 'package:ccs_sis/views/scan_update_status_item.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +23,7 @@ class UpdateItem extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ScanBorrowItem(),
+                  builder: (context) => const ScanBorrowItem(),
                 ),
               );
             },
@@ -45,7 +47,7 @@ class UpdateItem extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => UpdateStatusItem(),
+                  builder: (context) => const UpdateStatusItem(),
                 ),
               );
             },

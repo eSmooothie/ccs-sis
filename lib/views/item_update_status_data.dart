@@ -1,10 +1,9 @@
-import 'package:ccs_sis/models/borrowItemModel.dart';
-import 'package:ccs_sis/models/checkItemModel.dart';
+// ignore_for_file: avoid_print
+
 import 'package:ccs_sis/models/newItemModel.dart';
 import 'package:ccs_sis/models/updateStatusItemModel.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class UpdateStatusItemData extends StatefulWidget {
   const UpdateStatusItemData({
@@ -30,7 +29,6 @@ class _UpdateStatusItemDataState extends State<UpdateStatusItemData> {
 
   @override
   void initState() {
-    // TODO: implement initState
     itemCode = widget.itemId;
     _transferTo = TextEditingController();
     _newLocation = TextEditingController();
@@ -47,7 +45,7 @@ class _UpdateStatusItemDataState extends State<UpdateStatusItemData> {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
             )),
       ),

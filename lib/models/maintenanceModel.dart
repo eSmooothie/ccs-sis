@@ -9,7 +9,6 @@ class MaintenanceModel extends GoogleSheet {
   late GSheets _gSheet;
   late Spreadsheet _spreadsheet;
 
-  @override
   Future<void> init() async {
     _gSheet = GSheets(credentials);
     _spreadsheet = await _gSheet.spreadsheet(spreadSheetId);

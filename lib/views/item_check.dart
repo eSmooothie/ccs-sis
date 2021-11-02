@@ -49,11 +49,11 @@ class _ItemCheckState extends State<ItemCheck> {
                   child: (result != null)
                       ? Text(
                           'Item: ${result!.code}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18.0,
                           ),
                         )
-                      : Text(
+                      : const Text(
                           'Scan a code',
                           style: TextStyle(
                             fontSize: 18.0,
@@ -73,9 +73,9 @@ class _ItemCheckState extends State<ItemCheck> {
                                   controller!.resumeCamera();
                                 });
                               },
-                              child: Text("Scan again"),
+                              child: const Text("Scan again"),
                               style: OutlinedButton.styleFrom(
-                                fixedSize: Size(150, 75),
+                                fixedSize: const Size(150, 75),
                               ),
                             ),
                             OutlinedButton(
@@ -88,9 +88,9 @@ class _ItemCheckState extends State<ItemCheck> {
                                   ),
                                 );
                               },
-                              child: Text("Proceed"),
+                              child: const Text("Proceed"),
                               style: OutlinedButton.styleFrom(
-                                fixedSize: Size(150, 75),
+                                fixedSize: const Size(150, 75),
                               ),
                             ),
                           ],
@@ -99,9 +99,9 @@ class _ItemCheckState extends State<ItemCheck> {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          child: Text("Back"),
+                          child: const Text("Back"),
                           style: OutlinedButton.styleFrom(
-                            fixedSize: Size(200, 75),
+                            fixedSize: const Size(200, 75),
                           ),
                         ),
                 ),

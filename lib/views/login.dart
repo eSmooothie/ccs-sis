@@ -15,7 +15,7 @@ class Login extends StatelessWidget {
         children: [
           Flexible(
             flex: 1,
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.of(context).size.width,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -37,22 +37,20 @@ class Login extends StatelessWidget {
           ),
           Flexible(
             flex: 5,
-            child: Container(
-              child: OutlinedButton.icon(
-                onPressed: () {
-                  final provider =
-                      Provider.of<GoogleSingInProvider>(context, listen: false);
-                  provider.googleLogin();
-                },
-                style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.all(18.0),
-                    fixedSize: const Size(250, 75)),
-                icon: const Icon(
-                  FontAwesomeIcons.google,
-                  color: Colors.red,
-                ),
-                label: const Text("Continue with Google"),
+            child: OutlinedButton.icon(
+              onPressed: () {
+                final provider =
+                    Provider.of<GoogleSingInProvider>(context, listen: false);
+                provider.googleLogin();
+              },
+              style: OutlinedButton.styleFrom(
+                  padding: const EdgeInsets.all(18.0),
+                  fixedSize: const Size(250, 75)),
+              icon: const Icon(
+                FontAwesomeIcons.google,
+                color: Colors.red,
               ),
+              label: const Text("Continue with Google"),
             ),
           ),
         ],
