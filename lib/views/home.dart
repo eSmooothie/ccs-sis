@@ -1,5 +1,7 @@
 import 'package:ccs_sis/helper/google_signin.dart';
+import 'package:ccs_sis/views/item_check.dart';
 import 'package:ccs_sis/views/login.dart';
+import 'package:ccs_sis/views/new_item.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -45,21 +47,19 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        leading: Flex(
-          direction: Axis.horizontal,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              radius: 20,
-              backgroundImage: NetworkImage(user!.photoURL!),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 15.0),
-              child: Text("${user.displayName}"),
-            ),
-          ],
+        leading: Container(
+          padding: EdgeInsets.all(5.0),
+          child: CircleAvatar(
+            radius: 15,
+            backgroundImage: NetworkImage(user!.photoURL!),
+          ),
         ),
-        leadingWidth: 200,
+        title: Text(
+          "${user.displayName}",
+          style: TextStyle(
+            fontSize: 16.0,
+          ),
+        ),
         actions: [
           IconButton(
             onPressed: () {
@@ -103,6 +103,12 @@ class MainPage extends StatelessWidget {
                   OutlinedButton(
                     onPressed: () {
                       print("Check Item");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ItemCheck(),
+                        ),
+                      );
                     },
                     child: const Text(
                       "Check Item",
@@ -148,6 +154,12 @@ class MainPage extends StatelessWidget {
                   OutlinedButton(
                     onPressed: () {
                       print("Scan new item");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NewItem(),
+                        ),
+                      );
                     },
                     child: const Text(
                       "Scan new item",
