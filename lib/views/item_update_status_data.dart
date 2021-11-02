@@ -142,6 +142,13 @@ class _UpdateStatusItemDataState extends State<UpdateStatusItemData> {
                     UpdateStatusItemModel model = UpdateStatusItemModel();
                     model.insert(item);
 
+                    NewItemModel newItemModel = NewItemModel();
+                    newItemModel.updateData(
+                      id: itemCode,
+                      columnKey: "MRE",
+                      value: _transferTo.text,
+                    );
+
                     await showDialog(
                         context: context,
                         builder: (context) {
