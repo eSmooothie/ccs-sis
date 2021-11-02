@@ -25,6 +25,8 @@ class _NewItemDataState extends State<NewItemData> {
   String? _descErr;
   String? _mreErr;
   String? _locErr;
+
+  String sysMSG = "Saving...";
   @override
   void initState() {
     itemCode = widget.itemId;
@@ -143,14 +145,25 @@ class _NewItemDataState extends State<NewItemData> {
                         scanBy: user!.displayName,
                         date: date.toString());
 
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return const AlertDialog(
+                            title: Text("Saving"),
+                          );
+                        });
                     // print(newItem.toString());
-                    newItemData.insert(newItem);
+                    await newItemData.insert(newItem);
+                    await Future.delayed(
+                      const Duration(seconds: 2),
+                    );
+                    Navigator.pop(context);
 
                     await showDialog(
                         context: context,
                         builder: (context) {
                           return const AlertDialog(
-                            title: Text("Success"),
+                            title: Text("Saved"),
                           );
                         });
 

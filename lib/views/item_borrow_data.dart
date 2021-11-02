@@ -162,13 +162,27 @@ class _BorrowItemDataState extends State<BorrowItemData> {
                     );
 
                     BorrowItemModel model = BorrowItemModel();
-                    model.insert(item);
+
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return const AlertDialog(
+                            title: Text("Saving"),
+                          );
+                        });
+
+                    await model.insert(item);
+
+                    await Future.delayed(
+                      const Duration(seconds: 2),
+                    );
+                    Navigator.pop(context);
 
                     await showDialog(
                         context: context,
                         builder: (context) {
                           return const AlertDialog(
-                            title: Text("Success"),
+                            title: Text("Saved"),
                           );
                         });
 

@@ -27,6 +27,8 @@ class _UpdateStatusItemDataState extends State<UpdateStatusItemData> {
 
   String checkType = "daily";
 
+  bool inSubmit = false;
+
   @override
   void initState() {
     itemCode = widget.itemId;
@@ -141,26 +143,42 @@ class _UpdateStatusItemDataState extends State<UpdateStatusItemData> {
                     );
 
                     UpdateStatusItemModel model = UpdateStatusItemModel();
-                    model.insert(item);
 
                     NewItemModel newItemModel = NewItemModel();
-                    newItemModel.updateData(
+
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return const AlertDialog(
+                            title: Text("Saving"),
+                          );
+                        });
+
+                    await model.insert(item);
+
+                    await newItemModel.updateData(
                       id: itemCode,
                       columnKey: "MRE",
                       value: _transferTo.text,
                     );
 
-                    newItemModel.updateData(
+                    await newItemModel.updateData(
                       id: itemCode,
                       columnKey: "LOCATION",
                       value: _newLocation.text,
                     );
 
+                    await Future.delayed(
+                      const Duration(seconds: 2),
+                    );
+
+                    Navigator.pop(context);
+
                     await showDialog(
                         context: context,
                         builder: (context) {
                           return const AlertDialog(
-                            title: Text("Success"),
+                            title: Text("Saved"),
                           );
                         });
 
