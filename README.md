@@ -13,7 +13,6 @@ There are 3 main companents of the app:
   - GDrive and GSheet API: for storage(serve as database)
   - Firebase : for authenticating user
 
-===========
 ## For the future
  
 For the future endevour of this project I would to
