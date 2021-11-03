@@ -2,7 +2,7 @@
 
 A new Flutter project of mine.
 
-===========
+
 ## About
 
 This project is built for a certain purpose and that is 
