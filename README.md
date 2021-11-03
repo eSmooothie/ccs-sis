@@ -1,6 +1,7 @@
 # CCS Simple Inventory System
 
 A new Flutter project of mine.
+
 ===========
 ## About
 
